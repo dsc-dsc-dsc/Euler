@@ -14,12 +14,16 @@ def get_factors(n):
     print "flist is ", flist
     print "Ran get_factors()"
     return flist
-def checkp(n):
-    n = get_factors(n)
+def checkp(f):
+    fl = get_factors(f)
     plist = [0]
-    for x in n:
+    print "defined plist"
+    ite = 0
+    for x in fl:
+        print "loop iteration", ite
         if len(get_factors(x)) == 2:
             plist.append(x)
+        ite = ite+1
     print plist
     print "ran checkp()"
 checkp(answ)
